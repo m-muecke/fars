@@ -1,14 +1,25 @@
 Package: fars
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Fatality Analysis Reporting System
+Version: 0.0.1
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Maximilian", "Muecke", , "muecke.maximilian@gmail.com", role = c("aut", "cre"))
+Description: This package provides US National Highway Traffic Safety 
+  Administration's Fatality Analysis Reporting System, which is a nationwide
+  census providing the American public yearly data regarding fatal injuries
+  suffered in motor vehicle traffic crashes.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Suggests: 
+    knitr,
+    rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports: 
+    magrittr,
+    dplyr,
+    maps,
+    readr,
+    tidyr
+VignetteBuilder: knitr
