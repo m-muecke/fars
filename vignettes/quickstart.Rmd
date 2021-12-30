@@ -20,9 +20,30 @@ This vignette gives a basic example of how to use the `fars` package.
 library(fars)
 ```
 
+To be able to read the files, they need to be provided in the following format
+`accident_2013.csv.bz2`, this format can be provided with the utility function
+`make_filename` as follows:
 
-You can also visualize the accidents per state by running the following:
+```{r}
+filename <- make_filename("2014")
+filename
+```
+
+Loading the data set for the given year is provided by the `fars_read` function:
 
 ```{r}
 df <- fars_read(fars_example("accident_2013.csv.bz2"))
+head(df)
+```
+
+The `fars` package also provides basic analysis functions:
+
+```{r eval=FALSE}
+fars_summarize_years(2014)
+```
+
+As well as the possibility to plot the accidents per state for a given year:
+
+```{r eval=FALSE}
+fars_map_state(5, 2014)
 ```
